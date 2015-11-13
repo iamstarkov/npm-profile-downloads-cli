@@ -1,6 +1,6 @@
 {
   "name": "npm-profile-downloads-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "get downloads stats for target npm profile with cli",
   "license": "MIT",
   "repository": "iamstarkov/npm-profile-downloads-cli",
