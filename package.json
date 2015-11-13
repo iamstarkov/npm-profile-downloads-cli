@@ -1,0 +1,40 @@
+{
+  "name": "npm-profile-downloads-cli",
+  "version": "0.0.0",
+  "description": "My solid module",
+  "license": "MIT",
+  "repository": "iamstarkov/npm-profile-downloads-cli",
+  "author": {
+    "name": "Vladimir Starkov",
+    "email": "iamstarkov@gmail.com",
+    "url": "iamstarkov"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "meow": "^3.4.2"
+  },
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "xo": "^0.10.0"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
