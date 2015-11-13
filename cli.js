@@ -1,20 +1,29 @@
 #!/usr/bin/env node
 'use strict';
 var meow = require('meow');
-var npmProfileDownloadsCli = require('./');
+var npmProfileDownloads = require('npm-profile-downloads').default;
 
 var cli = meow([
 	'Usage',
-	'  $ npm-profile-downloads-cli [input]',
-	'',
-	'Options',
-	'  --foo  Lorem ipsum. [Default: false]',
+	'  $ npm-profile-downloads <day|week|month> <username>',
 	'',
 	'Examples',
-	'  $ npm-profile-downloads-cli',
-	'  unicorns & rainbows',
-	'  $ npm-profile-downloads-cli ponies',
-	'  ponies & rainbows'
-]);
+	'  $ npm-profile-downloads month sindresorhus',
+	'  323196379',
+	'  $ npm-profile-downloads month tjholowaychuk',
+	'  148049092'
+], {
+	alias: { h: 'help' }
+});
 
-console.log(npmProfileDownloadsCli(cli.input[0] || 'unicorns'));
+var period = cli.input[0];
+var username = cli.input[1];
+
+if (!period || !username) {
+	throw new Error('Period or Username had not been specified');
+}
+
+npmProfileDownloads('last-' + period, username, function(err, downloads) {
+	if (err) throw err;
+  console.log(downloads);
+})
