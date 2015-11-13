@@ -12,7 +12,10 @@
   "scripts": {
     "postpublish": "git push --follow-tags"
   },
-  "bin": "cli.js",
+  "bin": {
+    "npm-profile-downloads": "cli.js"
+  },
+  "preferGlobal": true,
   "files": [
     "cli.js"
   ],
