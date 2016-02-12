@@ -10,6 +10,8 @@
     "url": "iamstarkov"
   },
   "scripts": {
+    "test": "node test | tap-spec",
+    "tdd": "chokidar *.js -c 'npm test'",
     "postpublish": "git push --follow-tags"
   },
   "bin": {
@@ -33,5 +35,11 @@
   "dependencies": {
     "meow": "^3.4.2",
     "npm-profile-downloads": "^1.1.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "execa": "^0.2.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0"
   }
 }
