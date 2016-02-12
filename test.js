@@ -1,6 +1,7 @@
 'use strict';
 var test = require('tape');
 var execa = require('execa');
+global.Promise = require('pinkie-promise');
 
 test('cli', function (t) {
 	execa('./cli.js', ['day', 'sindresorhus']).then(function (res) {
