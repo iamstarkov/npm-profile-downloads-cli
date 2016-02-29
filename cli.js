@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 var meow = require('meow');
-var npmProfileDownloads = require('npm-profile-downloads').default;
+var npmProfileDownloads = require('npm-profile-downloads');
 
 var cli = meow([
 	'Usage',
@@ -23,7 +23,10 @@ if (!period || !username) {
 	throw new Error('Period or Username had not been specified');
 }
 
-npmProfileDownloads('last-' + period, username, function(err, downloads) {
-	if (err) throw err;
-  console.log(downloads);
-})
+npmProfileDownloads('last-' + period, username)
+	.then(function (downloads) {
+		console.log(downloads);
+	})
+	.catch(function (err) {
+		throw err;
+	});
