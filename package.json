@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "execa": "^0.2.2",
+    "execa": "^0.6.3",
     "pinkie-promise": "^2.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0"

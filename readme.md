@@ -1,5 +1,7 @@
 # npm-profile-downloads-cli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iamstarkov/npm-profile-downloads-cli.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][depstat-image]][depstat-url]
